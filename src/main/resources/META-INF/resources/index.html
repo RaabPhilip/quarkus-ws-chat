@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quarkus Chat (WebSocket)</title>
+    <style>
+        body {
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            margin: 2em;
+        }
+        textarea {
+            width: 50vw;
+            height: 300px;
+        }
+        #messageText {
+            width: 40vw;
+        }
+        input, button {
+            margin: 0.25em 0;
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+<body>
+<h2>Quarkus Chat (WebSocket)</h2>
+
+<div>
+    <label>
+        Server URL:
+        <input id="serverUrl" value="ws://localhost:8080/chat">
+    </label>
+    <button onclick="connect()">Connect</button>
+</div>
+
+<textarea id="messages" readonly></textarea>
+
+<div>
+    <label>
+        User ID:
+        <input id="userId" readonly>
+    </label><br>
+    <label>
+        Message:
+        <input id="messageText">
+    </label>
+    <button onclick="sendMessage()">Send</button>
+</div>
+</body>
